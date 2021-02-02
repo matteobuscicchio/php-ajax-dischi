@@ -1,5 +1,4 @@
 <?php
-    // qui 
     $database = [
         [
             "poster" => "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
@@ -72,6 +71,5 @@
             "year"=> "1987"
         ],
     ];
-
-    header('Content-Type: application/json');
-    echo json_encode($database);
+    // header('Content-Type: application/json');
+    // json_encode($database);

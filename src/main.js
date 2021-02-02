@@ -1,4 +1,4 @@
-let app = new Vue({
+let dischi = new Vue({
     el:'#dischi',
     data: {},
     methods: {},

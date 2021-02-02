@@ -7,7 +7,12 @@
   \*********************/
 /***/ (() => {
 
-
+var dischi = new Vue({
+  el: '#dischi',
+  data: {},
+  methods: {},
+  mounted: function mounted() {}
+});
 
 /***/ }),
 

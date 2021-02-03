@@ -16,7 +16,7 @@
 
     // da qui prendo le info per creare il  database
     // 'https://flynn.boolean.careers/exercises/api/array/music'
-    include "./dist/php/database.php";
+    include "./php/database.php";
 ?>
 
 <!DOCTYPE html>

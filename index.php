@@ -31,6 +31,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         
+        <!-- ajax -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
         <!-- Vue-JS -->
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         
@@ -61,6 +63,7 @@
                     </div>
                 </div>
 
+                <!-- metodo: PHP -->
                 <div class="cds-container container">
 
                     <!-- cd -->
@@ -73,6 +76,17 @@
                             <span class="genre"> <?= $card['genre'];?> </span>
                         </div>
                     <?php };?>
+                </div>
+
+                <div class="cds-container container">
+
+                    <div class="cd" v-for="disk in mDisks">
+                        <img :src="disk.poster" alt="">
+                        <h3>{{disk.title}}</h3>
+                        <span class="author">{{disk.author}}</span>
+                        <span class="year">{{disk.year}}</span>
+                        <span class="genere">{{disk.genre}}</span>
+                    </div>
                 </div>
             </main>
         </div>

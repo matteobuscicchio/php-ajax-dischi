@@ -9,9 +9,21 @@
 
 var dischi = new Vue({
   el: '#dischi',
-  data: {},
-  methods: {},
-  mounted: function mounted() {}
+  data: {
+    mDisks: []
+  },
+  methods: {
+    obtainInfo: function obtainInfo() {
+      var _this = this;
+
+      axios.get('./php/dbVue.php').then(function (resp) {
+        _this.mDisks = resp.data;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.obtainInfo();
+  }
 });
 
 /***/ }),

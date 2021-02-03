@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 
-body{
-    overflow-x: hidden;
-    font-family: 'Roboto', sans-serif;
-    background-color: purple;
+body {
+    background: #1E2D3B;
+    min-height: 100vh;
 }
 
-img{
-    width: 150px;
+.container {
+    width: 1070px;
+    height: 100%;
+    margin: 0 auto;
 }

@@ -71,5 +71,3 @@
             "year"=> "1987"
         ],
     ];
-    // header('Content-Type: application/json');
-    // json_encode($database);

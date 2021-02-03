@@ -16,7 +16,7 @@
 
     // da qui prendo le info per creare il  database
     // 'https://flynn.boolean.careers/exercises/api/array/music'
-    include "dist/php/database.php";
+    include "./dist/php/database.php";
 ?>
 
 <!DOCTYPE html>
@@ -40,19 +40,41 @@
     <body>
         <div id="dischi">
 
-            <div class="card_container">
+            <header>
+                <div class="container">
+                    <img src="./dist/img/logo.png" alt="logo"/>
+                </div>
+            </header>
 
-            <!-- card -->
-                <?php foreach ($database as $card) { ?>
-                    <div class="card">
-                        <img src="<?= $card['poster'];?>">
-                        <h2> <?= $card['title'];?> </h2>
-                        <p> <?= $card['author'];?> </p>
-                        <span> <?= $card['genre'];?> </span>
-                        <span> <?= $card['year'];?> </span>
+            <main>
+
+                <div class="container">
+
+                    <div class="select">
+
+                        <select>
+                            <option>pop</option>
+                            <option>rock</option>
+                            <option>metal</option>
+                            <option>jazz</option>
+                        </select>
                     </div>
-                <?php };?>
-            </div>
+                </div>
+
+                <div class="cds-container container">
+
+                    <!-- cd -->
+                    <?php foreach ($database as $card) { ?>
+                        <div class="cd">
+                            <img src="<?= $card['poster'];?>">
+                            <h3> <?= $card['title'];?> </h3>
+                            <span class="author"> <?= $card['author'];?> </span>
+                            <span class="year"> <?= $card['year'];?> </span>
+                            <span class="genre"> <?= $card['genre'];?> </span>
+                        </div>
+                    <?php };?>
+                </div>
+            </main>
         </div>
 
         <!-- JS -->
